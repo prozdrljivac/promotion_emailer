@@ -10,6 +10,7 @@ class Employee:
     last_name: str
     gender: str
     position: str
+    email: str
 
     @property
     def full_name(self: Self) -> str:
