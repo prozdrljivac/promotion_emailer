@@ -18,6 +18,13 @@ class Employee:
 
 
 def get_employees_from_csv(file_path: str) -> List[Employee]:
-    with open(file_path, newline="") as csv_file:
-        csv_reader = csv.DictReader(csv_file)
-        return [Employee(**data) for data in csv_reader]
+    try:
+        with open(file_path, newline="") as csv_file:
+            csv_reader = csv.DictReader(csv_file)
+            return [Employee(**data) for data in csv_reader]
+    except FileNotFoundError:
+        print(f"File not found {file_path}")
+        return []
+    except csv.Error as e:
+        print(f"CSV error in {file_path}: {e}")
+        return []

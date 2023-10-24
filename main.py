@@ -12,10 +12,9 @@ email_service = {
 
 def main():
     employees = get_employees_from_csv("test.csv")
+    # Fill template with user data
+    # Send email to employee
     es: BasicEmailService = email_service()
-    # TODO Change text in brackets with employee data
-    # TODO implement real email service -> sendgrid?
-    # TODO Add tests
     for employee in employees:
         es.send_email(
             subject="Promotion!",
