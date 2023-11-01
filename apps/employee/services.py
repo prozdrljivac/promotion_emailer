@@ -8,7 +8,6 @@ from typing import List, Self
 class Employee:
     first_name: str
     last_name: str
-    gender: str
     position: str
     email: str
 

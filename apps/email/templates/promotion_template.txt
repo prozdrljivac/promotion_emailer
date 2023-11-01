@@ -1,0 +1,7 @@
+Dear {{full_name}},
+
+Thank you for your hard work and dedication!
+We are delighted to announce the promotion to the position of {{position}}.
+
+Best regards,
+YOLO LLC
